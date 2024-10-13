@@ -14,8 +14,11 @@ end
 vim.g.leader = ' '
 
 Bind_insert("<leader><leader>", "<Esc>")
+Bind("qq", function()
+    vim.cmd.q()
+end)
 Bind("<leader><leader>", function()
-    vim.cmd("q!")
+    vim.cmd("Rex")
 end)
 Bind("<leader>v", function ()
     vim.cmd("Vex")
