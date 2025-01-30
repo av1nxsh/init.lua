@@ -5,6 +5,7 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     event = { "BufEnter" },
+    config = function()
 
       -- Then setup the statusline
       require("sttusline").setup {
