@@ -15,8 +15,8 @@ return {
             ensure_installed = {
                 "tsx",
                 "toml",
-                "fish",
-                "php",
+                "html",
+                "css",
                 "json",
                 "yaml",
                 "javascript",
