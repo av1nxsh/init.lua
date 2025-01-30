@@ -1,64 +1,64 @@
 return
-    --  the colorscheme should be available when starting Neovim
-    {
-        "folke/tokyonight.nvim",
-        lazy = false, -- make sure we load this during startup if it is your main colorscheme
-        priority = 1000, -- make sure to load this before all the other start plugins
-        config = function()
-            -- load the colorscheme here
-            require("tokyonight").setup({
-                on_colors = function(colors)
-                    colors.hint = colors.orange
-                end,
-                 on_highlights = function(hl, c)
-                    local white = "#a8faff"
-                    hl.TelescopeBorder = {
-                        bg = "none",
-                        fg = white,
-                    }
-                    hl.TelescopePromptBorder = {
-                        bg = "none",
-                        fg = white,
-                    }
-                    hl.TelescopePromptNormal = {
-                        bg = "none",
-                        -- fg = white
-                    }
-                    hl.TelescopeNormal = {
-                        bg = "none",
-                        -- fg = white,
-                    }
-                    hl.TelescopePromptTitle = {
-                        bg = "none",
-                        -- fg = white,
-                    }
-                    hl.TelescopePreviewTitle = {
-                        bg = "none",
-                        -- fg = white,
-                    }
-                    hl.TelescopeResultsTitle = {
-                        bg = "none",
-                        -- fg = white,
-                    }
-                end,
-               -- your configuration comes here
-                -- or leave it empty to use the default settings
-                style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-                transparent = true, -- Enable this to disable setting the background color
-                terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-                styles = {
-                    -- Style to be applied to different syntax groups
-                    -- Value is any valid attr-list value for `:help nvim_set_hl`
-                    comments = { italic = false },
-                    keywords = { italic = false },
-                    -- Background styles. Can be "dark", "transparent" or "normal"
-                    sidebars = "dark", -- style for sidebars, see below
-                    floats = "dark", -- style for floating windows
-                },
-            })
-            vim.cmd([[colorscheme tokyonight]])
+  --  the colorscheme should be available when starting Neovim
+  {
+    "folke/tokyonight.nvim",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      -- load the colorscheme here
+      require("tokyonight").setup({
+        on_colors = function(colors)
+          colors.hint = colors.orange
         end,
-    }
+        on_highlights = function(hl, c)
+          local white = "#a8faff"
+          hl.TelescopeBorder = {
+            bg = "none",
+            fg = white,
+          }
+          hl.TelescopePromptBorder = {
+            bg = "none",
+            fg = white,
+          }
+          hl.TelescopePromptNormal = {
+            bg = "none",
+            -- fg = white
+          }
+          hl.TelescopeNormal = {
+            bg = "none",
+            -- fg = white,
+          }
+          hl.TelescopePromptTitle = {
+            bg = "none",
+            -- fg = white,
+          }
+          hl.TelescopePreviewTitle = {
+            bg = "none",
+            -- fg = white,
+          }
+          hl.TelescopeResultsTitle = {
+            bg = "none",
+            -- fg = white,
+          }
+        end,
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+        transparent = true, -- Enable this to disable setting the background color
+        terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+        styles = {
+          -- Style to be applied to different syntax groups
+          -- Value is any valid attr-list value for `:help nvim_set_hl`
+          comments = { italic = false },
+          keywords = { italic = false },
+          -- Background styles. Can be "dark", "transparent" or "normal"
+          sidebars = "dark", -- style for sidebars, see below
+          floats = "dark", -- style for floating windows
+        },
+      })
+      vim.cmd([[colorscheme tokyonight]])
+    end,
+  }
 
 
 -- LazySpec (plugin specification)
