@@ -14,9 +14,6 @@ end
 vim.g.leader = ' '
 
 Bind_insert("<leader><leader>", "<Esc>")
-Bind("qq", function()
-    vim.cmd.q()
-end)
 Bind("<leader><leader>", function()
     vim.cmd("Rex")
 end)

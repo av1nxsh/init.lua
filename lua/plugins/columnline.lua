@@ -1,4 +1,5 @@
 return {
-  "ecthelionvi/NeoColumn.nvim",
-  opts = {}
+    "ecthelionvi/NeoColumn.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = {}
 }
