@@ -1,12 +1,12 @@
-Bind_insert= function (mapping, command)
+Bind_insert = function(mapping, command)
     vim.keymap.set("i", mapping, command)
 end
 
-Bind= function (mapping, command)
+Bind = function(mapping, command)
     vim.keymap.set("n", mapping, command)
 end
 
-Bind_visual= function (mapping, command)
+Bind_visual = function(mapping, command)
     vim.keymap.set("v", mapping, command)
 end
 
@@ -17,20 +17,21 @@ Bind_insert("<leader><leader>", "<Esc>")
 Bind("<leader><leader>", function()
     vim.cmd("Rex")
 end)
-Bind("<leader>v", function ()
+Bind("<leader>v", function()
     vim.cmd("Vex")
     vim.cmd('wincmd =')
 end)
-Bind("<leader>s", function ()
+Bind("<leader>s", function()
     vim.cmd("Sex")
     vim.cmd('wincmd =')
 end)
-Bind("<leader>",":")
+Bind("<leader>", ":")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 Bind_visual("J", ":m '>+1<CR>gv=gv")
 Bind_visual("K", ":m '<-2<CR>gv=gv")

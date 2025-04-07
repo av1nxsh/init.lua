@@ -28,7 +28,7 @@ autocmd('filetype', {
     end
 })
 autocmd('filetype', {
-        pattern = 'nnn',
+        pattern = 'oil',
         desc = 'Better mappings for netrw',
         callback = function()
             local bind = function(lhs, rhs)

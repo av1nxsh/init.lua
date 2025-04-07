@@ -1,10 +1,7 @@
-return{
-    "Mr-LLLLL/cool-chunk.nvim",
-    event = { "CursorHold", "CursorHoldI" },
-    dependencies = {
-        "nvim-treesitter/nvim-treesitter",
-    },
-    config = function()
-        require("cool-chunk").setup({})
-    end
+return {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
 }
