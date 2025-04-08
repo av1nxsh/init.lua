@@ -13,19 +13,6 @@ end
 
 vim.g.leader = ' '
 
-Bind_insert("<leader><leader>", "<Esc>")
-Bind("<leader><leader>", function()
-    vim.cmd("Rex")
-end)
-Bind("<leader>v", function()
-    vim.cmd("Vex")
-    vim.cmd('wincmd =')
-end)
-Bind("<leader>s", function()
-    vim.cmd("Sex")
-    vim.cmd('wincmd =')
-end)
-Bind("<leader>", ":")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
