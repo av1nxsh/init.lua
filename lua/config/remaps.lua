@@ -26,24 +26,3 @@ Bind_visual("K", ":m '<-2<CR>gv=gv")
 Bind('<leader>y', '"+yy')
 Bind_visual('<leader>y', '"+y')
 
--- TODO: Add split and navigation shortcuts
--- https://github.com/folke/todo-comments.nvim?tab=readme-ov-file
---
--- INFO: netrw remaps {disabled}
---
--- Bind("<leader>ht", function ()
---     vim.cmd.w()
---     vim.cmd.Ex()
--- end)
--- Bind("", function ()
---     vim.cmd.Ex()
--- end)
---
--- Bind("<leader>hh", function ()
---     vim.cmd.Ex()
--- end)
---
--- Bind("<leader>hs", function ()
---     vim.cmd.Sex()
--- end)
---

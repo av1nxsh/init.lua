@@ -5,7 +5,9 @@ return {
     config = function()
         vim.cmd "colorscheme kanagawa-dragon"
         require('kanagawa').setup({
-            transparent=true
+            transparent = true,
+            compile = true
         })
+        vim.cmd "KanagawaCompile"
     end,
 }

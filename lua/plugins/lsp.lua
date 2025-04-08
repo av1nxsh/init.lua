@@ -107,6 +107,9 @@ return {
                                 semicolon = "SameLine",
                                 setType = false,
                             },
+                            diagnostics = {
+                                globals = {"vim"},
+                            }
                         },
                     },
                 },
