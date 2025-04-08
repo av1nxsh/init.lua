@@ -15,7 +15,12 @@ return {
     event = 'BufRead', -- Use BufRead instead of LazyFile
     config = function()
         vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-
+        require('mason').setup {
+          registries = {
+            'github:Crashdummyy/mason-registry',
+            'github:mason-org/mason-registry',
+          },
+        }
         local cmp = require('cmp')
         cmp.setup({
             snippet = {
