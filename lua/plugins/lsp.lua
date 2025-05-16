@@ -45,6 +45,17 @@ return {
             })
         })
 
+        -- Function to toggle inlay hints
+        local inlay_hints_enabled = true
+        local function toggle_inlay_hints()
+            inlay_hints_enabled = not inlay_hints_enabled
+            vim.lsp.inlay_hint.enable(inlay_hints_enabled)
+            print("Inlay hints: " .. (inlay_hints_enabled and "enabled" or "disabled"))
+        end
+
+        -- Create keymap to toggle inlay hints
+        vim.keymap.set('n', '<leader>th', toggle_inlay_hints, { desc = "Toggle inlay hints" })
+
         require('lsp-setup').setup({
             default_mappings = true,
             servers = {
